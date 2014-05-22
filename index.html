@@ -3,11 +3,21 @@
 <html>
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type">
-
+	<script>
+	function aClick(){
+		var browserstring = navigator.userAgent.toLowerCase();
+		if(browserstring.indexOf("firefox") != -1 || browserstring.indexOf("chrome") != -1){
+			location.href = "professional_business/home.html";
+		} else{
+			alert("为了效果最佳，请用chrom浏览器 或者 firefox浏览器打开！");
+		}
+	}
+	
+	</script>
 </head>
 
 <body>
 
-<a href="professional_business/home.html">professional_business</a>
+<a href="javascript:void(0)" onclick="aClick()">professional_business</a>
 </body>
 </html>
