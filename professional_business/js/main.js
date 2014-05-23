@@ -4,6 +4,7 @@
 
 $(function(){
     app.imgSwap();
+    app.portfolioOver();
 });
 
 var ui={},
@@ -35,5 +36,13 @@ app.imgSwap = function(){
         $(this).addClass("img-swap-dot-a-active");
         i=$(this).index();
         imgs.fadeOut(timer).eq(i).fadeIn(timer);
+    });
+};
+
+app.portfolioOver =function(){
+    var portAs = $(".portfolio-a");
+    portAs.click(function(){
+        portAs.removeClass("portfolio-active");
+        $(this).addClass("portfolio-active");
     });
 };
